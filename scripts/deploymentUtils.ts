@@ -92,7 +92,7 @@ export async function deployContract(
   await contract.deployTransaction.wait()
   console.log(`\n--------------------- ${contractName} ---------------------\n`)
   console.log(`address: ${contract.address}`)
-  console.log(`args: ${constructorArgs.join(', ')}`)
+  console.log(`args:\n${constructorArgs.join('\n')}\n`)
 
   if (verify)
     await verifyContract(contractName, contract.address, constructorArgs)
