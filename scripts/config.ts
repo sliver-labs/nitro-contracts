@@ -4,15 +4,15 @@ import { ethers } from 'ethers'
 // This need to be adjusted for Orbit chains
 export const maxDataSize = 104857;
 
-export const smfMainnetChainId = '16661';
-export const smfTestnetChainId = '1066601';
+export const smfMainnetChainId = 16661;
+export const smfTestnetChainId = 1066601;
 
 const ownerAddress = process.env.DEPLOYER_ADDRESS;
 const batchPosterAddress = process.env.SECONDARY_ADDRESS;
 
 
 const smfTestnetChainConfig = {
-  chainId: ethers.BigNumber.from(smfTestnetChainId),
+  chainId: smfTestnetChainId,
   homesteadBlock: 0,
   daoForkBlock: null,
   daoForkSupport: true,

@@ -177,6 +177,7 @@ export async function createRollup(
       console.log('AdminProxy Contract created at address:', adminProxy)
       console.log('SequencerInbox (proxy) created at address:', sequencerInbox)
       console.log('Bridge (proxy) Contract created at address:', bridge)
+      console.log('UpgradeExecutor (proxy) Contract created at address:', upgradeExecutor)
       console.log('ValidatorUtils Contract created at address:', validatorUtils)
       console.log(
         'ValidatorWalletCreator Contract created at address:',

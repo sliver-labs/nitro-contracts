@@ -90,14 +90,14 @@ export async function deployContract(
 
   const contract: Contract = await connectedFactory.deploy(...deploymentArgs)
   await contract.deployTransaction.wait()
-  console.log(
-    `* New ${contractName} created at address: ${
-      contract.address
-    } ${constructorArgs.join(' ')}`
-  )
+  console.log(`\n--------------------- ${contractName} ---------------------\n`)
+  console.log(`address: ${contract.address}`)
+  console.log(`args:\n${constructorArgs.join('\n')}\n`)
 
   if (verify)
     await verifyContract(contractName, contract.address, constructorArgs)
+
+  console.log(`\n-------------------------------------\n`)
 
   return contract
 }
