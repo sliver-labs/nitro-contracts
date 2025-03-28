@@ -1,4 +1,5 @@
 # Arbitrum Nitro Rollup Contracts
+> See project specific content [below](#semicolon-fingers)
 
 This is the package with the smart contract code that powers Arbitrum Nitro and Espresso integration.
 It includes the rollup and fraud proof smart contracts, as well as interfaces for interacting with precompiles.
@@ -64,6 +65,19 @@ For those that prefer to deploy the Nitro software either directly on Ethereum (
 
 | Contract | Sepolia | ArbOne |
 | :--- | :---: | :---: |
+| Block Number | [`136641312`](https://sepolia.arbiscan.io/block/136641312) | |
+| --- | | |
+| [RollupProxy](src/rollup/RollupProxy.sol) | [`0x2d76669A245923724afED0a90D882Cc69B0E160b`](https://sepolia.arbiscan.io/address/0x2d76669A245923724afED0a90D882Cc69B0E160b) | |
+| Inbox (proxy) | [`0x04753159d7870d3d818199241653734f7467479A`](https://sepolia.arbiscan.io/address/0x04753159d7870d3d818199241653734f7467479A) | |
+| Outbox (proxy) | [`0x43A9365cbc3DaCF9456D90b52BcF4E79D4D2d0bf`](https://sepolia.arbiscan.io/address/0x43A9365cbc3DaCF9456D90b52BcF4E79D4D2d0bf) | |
+| rollupEventInbox (proxy) | [`0x5378263B31277d8947d96c8109C713A29ab75a41`](https://sepolia.arbiscan.io/address/0x5378263B31277d8947d96c8109C713A29ab75a41) | |
+| challengeManager (proxy) | [`0xEFdcE02b77a07Ec931a59ff16b2a46558E09A4C4`](https://sepolia.arbiscan.io/address/0xEFdcE02b77a07Ec931a59ff16b2a46558E09A4C4) | |
+| AdminProxy (proxy) | [`0xf44C2D4F255D3DC5Fe99304EbF36F96E649C5Ac7`](https://sepolia.arbiscan.io/address/0xf44C2D4F255D3DC5Fe99304EbF36F96E649C5Ac7) | |
+| SequencerInbox (proxy) | [`0xeb586ADc16b7BA2B575A6AFC901Ab293C0feA7CB`](https://sepolia.arbiscan.io/address/0xeb586ADc16b7BA2B575A6AFC901Ab293C0feA7CB) | |
+| Bridge (proxy) | [`0x8C076C00465b97D7ad949F61D018dD8139347Cb4`](https://sepolia.arbiscan.io/address/0x8C076C00465b97D7ad949F61D018dD8139347Cb4) | |
+| ValidatorUtils (proxy) | [`0x002CdA7f3A37f2dbE949c1e72f584Ded51bE2f18`](https://sepolia.arbiscan.io/address/0x002CdA7f3A37f2dbE949c1e72f584Ded51bE2f18) | |
+| ValidatorWalletCreator (proxy) | [`0x151Cb2fB60Eb76bE30A68991AB8A667eF445dbb8`](https://sepolia.arbiscan.io/address/0x151Cb2fB60Eb76bE30A68991AB8A667eF445dbb8) | |
+| --- | --- | --- |
 | [Bridge](./src/bridge/Bridge.sol) | [`0x004bb5E37b305aAae08B578507e9Ec452de32f42`](https://sepolia.arbiscan.io/address/0x004bb5E37b305aAae08B578507e9Ec452de32f42) | |
 | [Sequencer Inbox](./src/bridge/SequencerInbox.sol) | [`0xa0c4CeBa57F26417B8D17B656Ae6dB3B20ec8FFf`](https://sepolia.arbiscan.io/address/0xa0c4CeBa57F26417B8D17B656Ae6dB3B20ec8FFf) | |
 | [Inbox](./src/bridge/Inbox.sol) | [`0x964d85d9D41615450dFC90c6571a9bF552aCE015`](https://sepolia.arbiscan.io/address/0x964d85d9D41615450dFC90c6571a9bF552aCE015) | |
@@ -88,16 +102,3 @@ For those that prefer to deploy the Nitro software either directly on Ethereum (
 | [RollupCreator](./src/rollup/RollupCreator.sol) | [`0x03AfbdEfA11cf56fC7d0bd6F04fF23A0c72C22EC`](https://sepolia.arbiscan.io/address/0x03AfbdEfA11cf56fC7d0bd6F04fF23A0c72C22EC) | |
 | [DeployHelper](./src/rollup/DeployHelper.sol) | [`0x0325F6f793525D18cfb665607031f3DC24092632`](https://sepolia.arbiscan.io/address/0x0325F6f793525D18cfb665607031f3DC24092632) | |
 | [_RollupProxy_](./src/rollup/RollupProxy.sol) | [`0x235Ae718Ac6aAaE0089349Ca0226F272117075Fa`](https://sepolia.arbiscan.io/address/0x235Ae718Ac6aAaE0089349Ca0226F272117075Fa) | |
-| --- | | |
-| [RollupProxy](src/rollup/RollupProxy.sol) | [`0x2d76669A245923724afED0a90D882Cc69B0E160b`](https://sepolia.arbiscan.io/address/0x2d76669A245923724afED0a90D882Cc69B0E160b) | |
-| Inbox (proxy) | [`0x04753159d7870d3d818199241653734f7467479A`](https://sepolia.arbiscan.io/address/0x04753159d7870d3d818199241653734f7467479A) | |
-| Outbox (proxy) | [`0x43A9365cbc3DaCF9456D90b52BcF4E79D4D2d0bf`](https://sepolia.arbiscan.io/address/0x43A9365cbc3DaCF9456D90b52BcF4E79D4D2d0bf) | |
-| rollupEventInbox (proxy) | [`0x5378263B31277d8947d96c8109C713A29ab75a41`](https://sepolia.arbiscan.io/address/0x5378263B31277d8947d96c8109C713A29ab75a41) | |
-| challengeManager (proxy) | [`0xEFdcE02b77a07Ec931a59ff16b2a46558E09A4C4`](https://sepolia.arbiscan.io/address/0xEFdcE02b77a07Ec931a59ff16b2a46558E09A4C4) | |
-| AdminProxy (proxy) | [`0xf44C2D4F255D3DC5Fe99304EbF36F96E649C5Ac7`](https://sepolia.arbiscan.io/address/0xf44C2D4F255D3DC5Fe99304EbF36F96E649C5Ac7) | |
-| SequencerInbox (proxy) | [`0xeb586ADc16b7BA2B575A6AFC901Ab293C0feA7CB`](https://sepolia.arbiscan.io/address/0xeb586ADc16b7BA2B575A6AFC901Ab293C0feA7CB) | |
-| Bridge (proxy) | [`0x8C076C00465b97D7ad949F61D018dD8139347Cb4`](https://sepolia.arbiscan.io/address/0x8C076C00465b97D7ad949F61D018dD8139347Cb4) | |
-| ValidatorUtils (proxy) | [`0x002CdA7f3A37f2dbE949c1e72f584Ded51bE2f18`](https://sepolia.arbiscan.io/address/0x002CdA7f3A37f2dbE949c1e72f584Ded51bE2f18) | |
-| ValidatorWalletCreator (proxy) | [`0x151Cb2fB60Eb76bE30A68991AB8A667eF445dbb8`](https://sepolia.arbiscan.io/address/0x151Cb2fB60Eb76bE30A68991AB8A667eF445dbb8) | |
-| --- | | |
-| Block Number | [`136641312`](https://sepolia.arbiscan.io/block/136641312) | |
