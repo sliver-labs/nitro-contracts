@@ -75,6 +75,7 @@ For those that prefer to deploy the Nitro software either directly on Ethereum (
 | AdminProxy (proxy) | [`0xf44C2D4F255D3DC5Fe99304EbF36F96E649C5Ac7`](https://sepolia.arbiscan.io/address/0xf44C2D4F255D3DC5Fe99304EbF36F96E649C5Ac7) | |
 | SequencerInbox (proxy) | [`0xeb586ADc16b7BA2B575A6AFC901Ab293C0feA7CB`](https://sepolia.arbiscan.io/address/0xeb586ADc16b7BA2B575A6AFC901Ab293C0feA7CB) | |
 | Bridge (proxy) | [`0x8C076C00465b97D7ad949F61D018dD8139347Cb4`](https://sepolia.arbiscan.io/address/0x8C076C00465b97D7ad949F61D018dD8139347Cb4) | |
+| UpgradeExecutor (proxy) | [`0xFDb878064e8D9b1130078046eeb49183b51E4e97`](https://sepolia.arbiscan.io/address/0xFDb878064e8D9b1130078046eeb49183b51E4e97) | |
 | ValidatorUtils (proxy) | [`0x002CdA7f3A37f2dbE949c1e72f584Ded51bE2f18`](https://sepolia.arbiscan.io/address/0x002CdA7f3A37f2dbE949c1e72f584Ded51bE2f18) | |
 | ValidatorWalletCreator (proxy) | [`0x151Cb2fB60Eb76bE30A68991AB8A667eF445dbb8`](https://sepolia.arbiscan.io/address/0x151Cb2fB60Eb76bE30A68991AB8A667eF445dbb8) | |
 | --- | --- | --- |
