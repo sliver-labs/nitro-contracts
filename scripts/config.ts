@@ -4,6 +4,37 @@ import { ethers } from 'ethers'
 // This need to be adjusted for Orbit chains
 export const maxDataSize = 104857
 
+const smfTestnetChainConfig = {
+  chainId: ethers.BigNumber.from('YOUR_CHAIN_ID'),
+  homesteadBlock: 0,
+  daoForkBlock: null,
+  daoForkSupport: true,
+  eip150Block: 0,
+  eip150Hash: '0x0000000000000000000000000000000000000000000000000000000000000000',
+  eip155Block: 0,
+  eip158Block: 0,
+  byzantiumBlock: 0,
+  constantinopleBlock: 0,
+  petersburgBlock: 0,
+  istanbulBlock: 0,
+  muirGlacierBlock: 0,
+  berlinBlock: 0,
+  londonBlock: 0,
+  clique: {
+    period: 0,
+    epoch: 0,
+  },
+  arbitrum: {
+    EnableArbOS: true,
+    EnableEspresso: true,
+    AllowDebugPrecompiles: false,
+    DataAvailabilityCommittee: false,
+    InitialArbOSVersion: 10,
+    InitialChainOwner: 'YOUR_OWNED_ADDRESS',
+    GenesisBlockNum: 0,
+  },
+}
+
 export const config = {
   rollupConfig: {
     confirmPeriodBlocks: ethers.BigNumber.from('1'),
@@ -15,8 +46,7 @@ export const config = {
     owner: 'OWNER_ADDRESS',
     loserStakeEscrow: ethers.constants.AddressZero,
     chainId: ethers.BigNumber.from('YOUR_CHAIN_ID'),
-    chainConfig:
-      '{"chainId":YOUR_CHAIN_ID,"homesteadBlock":0,"daoForkBlock":null,"daoForkSupport":true,"eip150Block":0,"eip150Hash":"0x0000000000000000000000000000000000000000000000000000000000000000","eip155Block":0,"eip158Block":0,"byzantiumBlock":0,"constantinopleBlock":0,"petersburgBlock":0,"istanbulBlock":0,"muirGlacierBlock":0,"berlinBlock":0,"londonBlock":0,"clique":{"period":0,"epoch":0},"arbitrum":{"EnableArbOS":true,"EnableEspresso":true,"AllowDebugPrecompiles":false,"DataAvailabilityCommittee":false,"InitialArbOSVersion":10,"InitialChainOwner":"AN_OWNED_ADDRESS","GenesisBlockNum":0}}',
+    chainConfig: JSON.stringify(smfTestnetChainConfig),
     genesisBlockNum: ethers.BigNumber.from('0'),
     sequencerInboxMaxTimeVariation: {
       delayBlocks: ethers.BigNumber.from('5760'),
