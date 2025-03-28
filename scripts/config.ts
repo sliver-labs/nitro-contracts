@@ -2,10 +2,17 @@ import { ethers } from 'ethers'
 
 // 90% of Geth's 128KB tx size limit, leaving ~13KB for proving
 // This need to be adjusted for Orbit chains
-export const maxDataSize = 104857
+export const maxDataSize = 104857;
+
+export const smfMainnetChainId = '16661';
+export const smfTestnetChainId = '1066601';
+
+const ownerAddress = process.env.DEPLOYER_ADDRESS;
+const batchPosterAddress = process.env.SECONDARY_ADDRESS;
+
 
 const smfTestnetChainConfig = {
-  chainId: ethers.BigNumber.from('YOUR_CHAIN_ID'),
+  chainId: ethers.BigNumber.from(smfTestnetChainId),
   homesteadBlock: 0,
   daoForkBlock: null,
   daoForkSupport: true,
@@ -30,7 +37,7 @@ const smfTestnetChainConfig = {
     AllowDebugPrecompiles: false,
     DataAvailabilityCommittee: false,
     InitialArbOSVersion: 10,
-    InitialChainOwner: 'YOUR_OWNED_ADDRESS',
+    InitialChainOwner: ownerAddress,
     GenesisBlockNum: 0,
   },
 }
@@ -43,9 +50,9 @@ export const config = {
     baseStake: ethers.utils.parseEther('0.01'),
     wasmModuleRoot:
       '0x184884e1eb9fefdc158f6c8ac912bb183bf3cf83f0090317e0bc4ac5860baa39',
-    owner: 'OWNER_ADDRESS',
+    owner: ownerAddress,
     loserStakeEscrow: ethers.constants.AddressZero,
-    chainId: ethers.BigNumber.from('YOUR_CHAIN_ID'),
+    chainId: ethers.BigNumber.from(smfTestnetChainId),
     chainConfig: JSON.stringify(smfTestnetChainConfig),
     genesisBlockNum: ethers.BigNumber.from('0'),
     sequencerInboxMaxTimeVariation: {
@@ -57,8 +64,10 @@ export const config = {
     espressoTEEVerifier: '0x8354db765810dF8F24f1477B06e91E5b17a408bF',
   },
   validators: [
-    'AN_OWNED_ADDRESS',
+    ownerAddress,
   ],
-  batchPosters: ['ANOTHER_OWNED_ADDRESS'],
-  batchPosterManager: 'ANOTHER_OWNED_ADDRESS'
+  batchPosters: [
+    batchPosterAddress,
+  ],
+  batchPosterManager: batchPosterAddress
 }
