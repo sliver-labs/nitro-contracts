@@ -12,7 +12,7 @@ const batchPosterAddress = process.env.SECONDARY_ADDRESS;
 
 
 const smfTestnetChainConfig = {
-  chainId: ethers.BigNumber.from(smfTestnetChainId),
+  chainId: smfTestnetChainId,
   homesteadBlock: 0,
   daoForkBlock: null,
   daoForkSupport: true,
